@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Aclonica'; }
+
+body {
+  font-size: 18px;
+  background: -webkit-linear-gradient(270deg, #b8c6db 0%, #f5f7fa 70%);
+  background-attachment: fixed; }
+
+.header {
+  width: 500px;
+  margin: 30px 0 10px 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(315deg, #009ffd 0%, #2a2a72 75%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  filter: drop-shadow(3px 4px 3px grey); }
+
+.your-income {
+  margin: 30px 0px;
+  text-align: center; }
+  .your-income #income-text {
+    font-size: 22px; }
+  .your-income #income-number {
+    font-size: 30px;
+    color: green;
+    font-weight: 600; }
+
+.input--btn {
+  width: 100%;
+  text-align: center; }
+  .input--btn .btn {
+    font-weight: 600;
+    padding: 2% 5%;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    border-radius: 30px;
+    color: #fff;
+    background: -webkit-linear-gradient(60deg, #f7b42c 50%, #fc575e 74%);
+    transition: all .2s; }
+  .input--btn .btn:hover {
+    box-shadow: 3px 3px 10px 2px grey; }
+  .input--btn .btn:active {
+    transform: translateY(1px); }
+
+.table-main {
+  margin: 5% 10% 5% 10%;
+  text-align: center;
+  border-radius: 20px;
+  background: -webkit-linear-gradient(315deg, #bbf0f3 40%, #009ffd 74%);
+  background-attachment: fixed; }
+  .table-main table {
+    border-collapse: collapse;
+    width: 100%; }
+    .table-main table thead {
+      font-size: 22px;
+      border-bottom: 2px solid black; }
+    .table-main table tr th, .table-main table tr td {
+      font-size: 20px;
+      padding: 2% 0%; }
+
+.input-pop {
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 2px grey;
+  border: none;
+  background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+  display: none;
+  border: 2px solid black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 20;
+  width: 60%;
+  max-width: 80%;
+  background-color: #fff;
+  animation: popup .5s; }
+  .input-pop .message-box {
+    display: none;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 20px; }
+    .input-pop .message-box .message {
+      color: red;
+      font-size: 20px;
+      animation: moveRight 0.5s;
+      overflow: hidden; }
+    .input-pop .message-box .message-close {
+      font-size: 24px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      padding: 3px;
+      border-radius: 50%;
+      font-weight: 900; }
+    .input-pop .message-box .message-close:hover {
+      color: #fff; }
+  .input-pop .input-pop-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600; }
+    .input-pop .input-pop-header .input-pop-close {
+      pointer-events: all;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 22px;
+      font-weight: 900; }
+  .input-pop .form {
+    display: block;
+    margin: 4% 2%; }
+    .input-pop .form .form-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5%; }
+    .input-pop .form label {
+      width: 50%;
+      font-size: 20px;
+      padding: 2%; }
+    .input-pop .form input {
+      width: 50%;
+      border: none;
+      border-bottom: 1px solid black;
+      font-size: 20px;
+      background-color: transparent; }
+    .input-pop .form input:focus {
+      border: none;
+      border-bottom: 2px solid green; }
+    .input-pop .form .submit-btn {
+      font-size: 26px;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+      line-height: 1.7;
+      transition: all .5s;
+      margin: 0 25%;
+      border: 0; }
+    .input-pop .form .submit-btn:hover {
+      letter-spacing: 3px;
+      background: -webkit-linear-gradient(to right, #a2ab58, #636363);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #a2ab58, #636363);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      border-radius: 20px; }
+    .input-pop .form .submit-btn:focus {
+      letter-spacing: 3px;
+      background: -webkit-linear-gradient(to right, #a2ab58, #636363);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #a2ab58, #636363);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      border-radius: 20px; }
+
+.results {
+  display: flex;
+  margin: 2% 10%;
+  justify-content: space-between;
+  font-size: 22px; }
+  .results span {
+    font-size: 30px;
+    font-weight: 600; }
+  .results .remaining span {
+    color: green; }
+
+#overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7, 5, 5, 0.651);
+  pointer-events: none; }
+
+@keyframes popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2); }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3); }
+  100% {
+    transform: translate(-50%, -50%) scale(1); } }
+
+@keyframes popdown {
+  0% {
+    transform: translate(-50%, -50%) scale(1); }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3); }
+  100% {
+    transform: translate(-50%, -50%) scale(0); } }
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+    overflow: hidden; }
+  40% {
+    opacity: 0; }
+  70% {
+    transform: translateX(30px);
+    opacity: 1; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+@media only screen and (max-width: 600px) {
+  .results {
+    display: block; }
+  .table-main {
+    margin: 5% 5%;
+    text-align: center; }
+    .table-main table {
+      border-radius: 20px;
+      background: -webkit-linear-gradient(315deg, #bbf0f3 40%, #009ffd 74%);
+      background-size: cover; }
+      .table-main table thead {
+        font-size: 20px;
+        border-bottom: 2px solid black; }
+      .table-main table tr th, .table-main table tr td {
+        font-size: 22px;
+        padding: 10px; }
+  .input--btn {
+    text-align: center; } }
