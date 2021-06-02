@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Manage Expenses</title>
+        <link rel="stylesheet"  href="css/style.css">
+        
+    </head>
+    <body>
+        <div class="header"> Manage Expenses</div>
+        <div class="your-income">
+            <!-- <button id="income-btn" onclick="addincome()">Add Expense</button> --> 
+            <span id="income-text">Your Income : </span>
+            <span id="income-number">0</span>
+        </div>
+        <div class="table-main">
+            <table>
+                    <thead class="heading-tr">
+                        <th>S.no</th>
+                        <th>Date</th>
+                        <th>Particulars</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </thead>
+                    <tbody id="tbody">
+
+                        <!-- -----------------------------here the list of expenses comes----------------- -->
+
+                    </tbody>
+            </table>
+        </div>
+        <div class="results">
+            <div class="total-item">Total Items : <span id="totalItems"></span></div>
+            <div class="remaining">Remaining Amount : <span id="remainingAmount"></span></div>
+            <div class="total-expenses">Total Expenses : <span id="totalExpenses"></span></div>
+        </div>
+        <div class="input--btn" id="btn-pop">
+            <button class="btn" id="button">Add Item</button>
+        </div>
+
+
+        <div class="input-pop input-popdown" id="input" >
+            <div class="input-pop-header">
+                <div class="input-pop-title">Enter Details</div>
+                <button class="input-pop-close">&times;</button>
+            </div>
+            <div class="message-box">
+                <div class="message">Please enter valid number in Price and Quantity</div>
+                <button id="message-btn" class="message-close">&times;</button>
+            </div>
+            <div class="input-pop-body">
+                <div class="form">
+                    <div class="form-item">
+                        <label for="item" id="lable-item">Item</label>
+                        <input type="text" value="item" id="item" name="item" placeholder="Enter item name" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="price" id="lable-price">Price</label>
+                        <input type="number" id="price" placeholder="Price per kg/liter/piece" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="quantity" id="lable-quantity">Quantity</label>
+                        <input type="number" id="quantity" placeholder="No.of items(Quantity)" required>
+                    </div>
+                    
+                    <input type="submit" value="Submit" class="submit-btn" name="additem">
+                </div>
+            </div>
+        </div>
+        
+        <div   id="overlay"></div>  
+    </body>
+    <script src="scripts/script.js"></script>
+</html>
